@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { MapFilterItems } from "./components/MapFilterItems";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Button>hellow word</Button>
-    </main>
+    <div className="container mx-auto px-5 lg:px-10">
+      <MapFilterItems></MapFilterItems>
+    </div>
   );
 }
