@@ -4,6 +4,7 @@ import Link from "next/link";
 import DesktopLogo from "../../../public/airbnb-desktop.png";
 import MobileLogo from "../../../public/airbnb-mobile.webp";
 import UserNav from './UserNav';
+import { SearchModalCompnent } from "./SearchModalCompnent";
 function Navbar() {
   return (
     <nav className="w-full border-b">
@@ -21,6 +22,7 @@ function Navbar() {
             className="block lg:hidden w-12"
           />
         </Link>
+        <SearchModalCompnent></SearchModalCompnent>
         <UserNav></UserNav>
       </div>
     </nav>
