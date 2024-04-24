@@ -6,8 +6,8 @@ import React from 'react';
 function StrucutreRoute({ params }: { params: { id: string } }) {
   return (
     <>
-      <div className="w-3/5 mx-auto">
-        <h2 className="text-3xl font-semibold tracking-tight transition-colors">
+      <div className="max-sm:w-full max-sm:text-center w-3/5 mx-auto">
+        <h2 className="max-sm:text-xl text-3xl font-semibold tracking-tight transition-colors">
           Which of these best describe your Home?
         </h2>
       </div>
