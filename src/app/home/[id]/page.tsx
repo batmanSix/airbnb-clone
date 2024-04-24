@@ -13,7 +13,7 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
 import { unstable_noStore as noStore } from "next/cache";
-import { SelectCalender } from "@/app/components/SelectCalender";
+import SelectCalender from "@/app/components/SelectCalender";
 
 async function getData(homeid: string) {
   // noStore();
@@ -71,7 +71,7 @@ export default async function HomeRoute({
         />
       </div>
 
-      <div className="max-sm:block">
+      <div className="max-sm:block lg:hidden">
         <h3 className="text-xl font-medium">
           {country?.flag} {country?.label} / {country?.region}
         </h3>
@@ -79,11 +79,12 @@ export default async function HomeRoute({
           <p>{data?.guests} Guests</p> * <p>{data?.bedrooms} Bedrooms</p> *{" "}
           {data?.bathrooms} Bathrooms
         </div>
+        <div>{data?.Reservation.homeId as any}</div>
         <form action={createReservation} className="mt-2">
           <input type="hidden" name="homeId" value={params.id} />
           <input type="hidden" name="userId" value={user?.id} />
 
-          {/* <SelectCalender reservation={data?.Reservation} /> */}
+          <SelectCalender reservation={data?.Reservation as any} />
 
           {user?.id ? (
             <ReservationSubmitButton />
@@ -161,7 +162,6 @@ export default async function HomeRoute({
           <input type="hidden" name="homeId" value={params.id} />
           <input type="hidden" name="userId" value={user?.id} />
 
-          {/* <SelectCalender reservation={data?.Reservation} /> */}
 
           {user?.id ? (
             <ReservationSubmitButton />
@@ -170,6 +170,10 @@ export default async function HomeRoute({
               <Link href="/api/auth/login">Make a Reservation</Link>
             </Button>
           )}
+
+          <div className="mt-5">
+            <SelectCalender reservation={data?.Reservation as any} />
+          </div>
         </form>
       </div>
     </div>

@@ -164,6 +164,8 @@ export async function createReservation(formData: FormData) {
   const data = await prisma.reservation.create({
     data: {
       userId: userId,
+      startDate: startDate,
+      endDate: endDate,
       homeId: homeId,
     },
   });

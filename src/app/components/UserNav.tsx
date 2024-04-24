@@ -66,6 +66,11 @@ async function UserNav() {
                 My Reservations
               </Link>
             </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link href="/about" className="w-full">
+                About
+              </Link>
+            </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <LogoutLink className="w-full">Logout</LogoutLink>
