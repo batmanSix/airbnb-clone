@@ -36,5 +36,15 @@ DATABASE_URL="mysql://[数据库用户名]:[数据库密码]@localhost:3306/[数
 ```
 
 
+### 预览图片pc
+![alt text](image.png)
 
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+### 预览图片手机h5
+![alt text](image-3.png)
+
+![alt text](image-4.png)
 ### 后续实现功能todo
